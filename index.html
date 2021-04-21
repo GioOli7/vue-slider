@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Slider</title>
 </head>
-<body>
-    <div id="app">
-        <div class="slider">
+<body class="flex-center">
+    <div class="flex-center" id="app">
+        <div class="slider"
+        @mouseenter="stopLoop"
+        @mouseleave="loop">
             <!-- prev -->
             <div @click="prev" class="prev">
                 <i class="fas fa-arrow-left"></i>

@@ -10,6 +10,7 @@ const app = new Vue({
             './images/image6.jpg'
         ],
         imageIndex: 0,
+        loopTimeIndex: 0,
     },
     created() {
         this.loop();
@@ -28,9 +29,12 @@ const app = new Vue({
             }
         },
         loop() {
-            setInterval(() => {
+            this.loopTimeIndex = setInterval(() => {
                 this.next();
-            }, 3000)
-        }
+            }, 2000)
+        },
+        stopLoop() {
+            clearInterval(this.loopTimeIndex)
+        },
     }
 })

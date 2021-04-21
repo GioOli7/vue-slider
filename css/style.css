@@ -4,11 +4,17 @@
     box-sizing: border-box;
 }
 
-#app {
+/* Utilites */
+.flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+body {
+    height: 100vh;
+}
+
 
 .slider {
     position: relative;
