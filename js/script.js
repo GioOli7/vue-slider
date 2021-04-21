@@ -11,6 +11,9 @@ const app = new Vue({
         ],
         imageIndex: 0,
     },
+    created() {
+        this.loop();
+    },
     methods: {
         next() {
             this.imageIndex++;
@@ -23,6 +26,11 @@ const app = new Vue({
             if (this.imageIndex < 0) {
                 this.imageIndex = this.images.length - 1;
             }
+        },
+        loop() {
+            setInterval(() => {
+                this.next();
+            }, 3000)
         }
     }
 })
