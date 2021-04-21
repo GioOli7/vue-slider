@@ -16,16 +16,16 @@
     <div id="app">
         <div class="slider">
             <!-- prev -->
-            <div class="prev">
+            <div @click="prev" class="prev">
                 <i class="fas fa-arrow-left"></i>
             </div>
 
             <!-- photos -->
             <div class="images">
-                <img src="./images/image1.png" alt="ACC image">
+                <img :src="images[imageIndex]" alt="ACC image">
             </div>
             <!-- next -->
-            <div class="next">
+            <div @click="next" class="next">
                 <i class="fas fa-arrow-right"></i>
             </div>
             <!-- pallini -->
